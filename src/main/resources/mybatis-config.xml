@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--配置-->
+<configuration>
+    <!--环境变量-->
+    <!--  development  开发者模式-->
+    <environments default="development">
+        <!--单个环境变量-->
+        <environment id="development">
+            <!--事务管理器-->
+            <transactionManager type="JDBC"></transactionManager>
+            <!--数据源-->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql:///mybatis01"/>
+                <property name="username" value="root"/>
+                <property name="password" value="12315.qq"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--映射器-->
+    <mappers>
+        <mapper resource="mapper/DemoMapper.xml"/>
+    </mappers>
+</configuration>
